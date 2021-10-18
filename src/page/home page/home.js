@@ -11,14 +11,14 @@ const Home = () => {
             <div className="headerText">
                 <h1>
                     <b>
-                        Happy Body, Happy Life
+                        Happy Health, Happy Life
                         <br /> 
                         Happy World
                     </b>
                 </h1>
 
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque minus laboriosam magnam id laborum sed accusamus tempore non hic molestias?
+                    Access to health care may vary across countries, communities, and individuals, influenced by social and economic conditions as well as health policies. Providing health care services means "the timely use of personal health services to achieve the best possible health outcomes"
                 </p>
             </div>
 

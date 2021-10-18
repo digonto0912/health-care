@@ -39,7 +39,7 @@ function App() {
 
           <Navbar bg="primary" variant="dark">
             <Container>
-              <Navbar.Brand><b>Happy Body</b></Navbar.Brand>
+              <Navbar.Brand><b>Happy Health</b></Navbar.Brand>
               <Nav className="me-auto">
                 <Nav.Link className="navStyles">
                   <Link className="navStyle" to="/">Home</Link>
