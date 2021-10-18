@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import Firebasegoogle from "./../../comp/hucks/firebasegoogle";
+import Firebasehuck from "../hucks/firebasehuck";
 
-const Login = () => {
-    const {firebaseCopyCode, user} = Firebasegoogle();
+const Signin = () => {
+    const {firebaseCopyCode, user} = Firebasehuck();
     // console.log(firebaseCopyCode);
     return (
         <div>
@@ -12,4 +12,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Signin;

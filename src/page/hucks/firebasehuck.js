@@ -8,7 +8,7 @@ import initializeFirebaseApp from "../firebaseConfig/InitializeFirebaseApp";
 
 initializeFirebaseApp();
 
-const Firebasegoogle = () => {
+const Firebasehuck = () => {
 
     // auth and provider
     const auth = getAuth();
@@ -22,8 +22,6 @@ const Firebasegoogle = () => {
         .then((result) => setUser(result.user))
         .catch((error) => setError(error.message));
 
-        // console.log(auth)
-        // console.log(provider)
     };
 
 
@@ -57,4 +55,4 @@ const Firebasegoogle = () => {
     return {firebaseCopyCode, user, error, signOutfunction};
 };
 
-export default Firebasegoogle;
+export default Firebasehuck;
