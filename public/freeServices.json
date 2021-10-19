@@ -2,21 +2,21 @@
     {
         "title" : "Online Emergency",
         "price" : "Free",
-        "img" : "https://shtheme.org/demosd/mecare/wp-content/uploads/2020/11/sr-icon01.png",
+        "img" : "https://cdn-icons-png.flaticon.com/512/2832/2832828.png",
         "description" : "Mauris nunc felis, congue eu convallis in, bibendum vitae nisl. Duis vestibulum eget orci maximus pretium.",
         "link": "google.com"
     },
     {
         "title" : "Medication Service",
         "price" : "Free",
-        "img" : "https://shtheme.org/demosd/mecare/wp-content/uploads/2020/11/sr-icon02.png",
+        "img" : "https://www.clipartkey.com/mpngs/m/86-860895_patient-free-icon-transparent-medical-icons-png.png",
         "description" : "Mauris nunc felis, congue eu convallis in, bibendum vitae nisl. Duis vestibulum eget orci maximus pretium.",
         "link": "google.com"
     },
     {
         "title" : "24hr Health Program",
         "price" : "free",
-        "img" : "https://shtheme.org/demosd/mecare/wp-content/uploads/2020/11/sr-icon03.png",
+        "img" : "https://cdn0.iconfinder.com/data/icons/medical-health-care-black-series-set-1/64/a-37-512.png",
         "description" : "Mauris nunc felis, congue eu convallis in, bibendum vitae nisl. Duis vestibulum eget orci maximus pretium.",
         "link": "google.com"
     }

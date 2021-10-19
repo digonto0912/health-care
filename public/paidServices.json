@@ -2,21 +2,21 @@
     {
         "title" : "Silver service",
         "price" : "$25.99",
-        "img" : "https://shtheme.org/demosd/mecare/wp-content/uploads/2020/11/pr-icon01.png",
+        "img" : "https://www.bajajallianz.com/content/dam/bagic/ab-health-insurance/health-insurance.png",
         "description" : "It is a long established fact that a reader will be distracted.",
         "link": "google.com"
     },
     {
-        "title" : "Gold Plan",
+        "title" : "Gold Service",
         "price" : "$45.99",
-        "img" : "https://shtheme.org/demosd/mecare/wp-content/uploads/2020/11/pr-icon02.png",
+        "img" : "https://storage.googleapis.com/iifl-storage/files/iifl_insights/images/Family_Floater_mailer_700x400_1.jpg",
         "description" : "It is a long established fact that a reader will be distracted.",
         "link": "google.com"
     },
     {
-        "title" : "Premium Plan",
+        "title" : "Premium Service",
         "price" : "$75.99",
-        "img" : "https://shtheme.org/demosd/mecare/wp-content/uploads/2020/11/pr-icon03.png",
+        "img" : "https://www.hdfcergo.com/images/default-source/health-lob/family-health-talk.jpg?sfvrsn=98728989_2&MaxWidth=800&MaxHeight=600&ScaleUp=false&Quality=High&Method=ResizeFitToAreaArguments&Signature=03ACFD60B6199ACA3C0228701E93DC7A1FA90315",
         "description" : "It is a long established fact that a reader will be distracted.",
         "link": "google.com"
     }

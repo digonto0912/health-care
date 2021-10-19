@@ -16,18 +16,16 @@ import {
 import Signin from "./page/signin/signin";
 import Signup from "./page/signup/signup";
 import Home from "./page/home page/home";
+import About from "./page/About/About";
+import Error from "./page/404/error";
+import AllServices from "./page/All Services/AllServices";
+import Profile from "./page/UserProfile/profile";
 
 
 function App() {
 
   const {signOutfunction} = Firebasehuck();
   const {user} = Firebasehuck();
-
-
-// about 
-  function About() {
-    return <h2>About</h2>;
-  }
 
     return (
 
@@ -49,7 +47,13 @@ function App() {
                   <Link className="navStyle" to="/">Home</Link>
                 </Nav.Link>
                 <Nav.Link className="navStyles">
+                  <Link className="navStyle" to="/AllServices">All Services</Link>
+                </Nav.Link>
+                <Nav.Link className="navStyles">
                   <Link className="navStyle" to="/about">About</Link>
+                </Nav.Link>
+                <Nav.Link className="navStyles">
+                  <Link className="navStyle" to="/profile">profile</Link>
                 </Nav.Link>
                 <Nav.Link className="navStyles">
                   <Link className="navStyle" to="/signin">signin</Link>
@@ -83,6 +87,15 @@ function App() {
             </Route>
             <Route path="/">
               <Home />
+            </Route>
+            <Route path="">
+              <Error />
+            </Route>
+            <Route path="/AllServices">
+              <AllServices />
+            </Route>
+            <Route path="/profile">
+              <Profile />
             </Route>
           </Switch>
         </div>
