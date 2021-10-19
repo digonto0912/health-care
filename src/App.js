@@ -35,12 +35,16 @@ function App() {
       <Router>
         <div>
 
+
           {/* location */}
 
-          <Navbar bg="primary" variant="dark">
+          <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
             <Container>
               <Navbar.Brand><b>Happy Health</b></Navbar.Brand>
+              <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+              <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="me-auto">
+
                 <Nav.Link className="navStyles">
                   <Link className="navStyle" to="/">Home</Link>
                 </Nav.Link>
@@ -59,7 +63,9 @@ function App() {
                 <Nav.Link>
                 <div>loged :{user.email}</div>
                 </Nav.Link>
+
               </Nav>
+              </Navbar.Collapse>
             </Container>
           </Navbar>
 

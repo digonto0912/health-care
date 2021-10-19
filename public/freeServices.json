@@ -1,0 +1,23 @@
+[
+    {
+        "title" : "Online Emergency",
+        "price" : "Free",
+        "img" : "https://shtheme.org/demosd/mecare/wp-content/uploads/2020/11/sr-icon01.png",
+        "description" : "Mauris nunc felis, congue eu convallis in, bibendum vitae nisl. Duis vestibulum eget orci maximus pretium.",
+        "link": "google.com"
+    },
+    {
+        "title" : "Medication Service",
+        "price" : "Free",
+        "img" : "https://shtheme.org/demosd/mecare/wp-content/uploads/2020/11/sr-icon02.png",
+        "description" : "Mauris nunc felis, congue eu convallis in, bibendum vitae nisl. Duis vestibulum eget orci maximus pretium.",
+        "link": "google.com"
+    },
+    {
+        "title" : "24hr Health Program",
+        "price" : "free",
+        "img" : "https://shtheme.org/demosd/mecare/wp-content/uploads/2020/11/sr-icon03.png",
+        "description" : "Mauris nunc felis, congue eu convallis in, bibendum vitae nisl. Duis vestibulum eget orci maximus pretium.",
+        "link": "google.com"
+    }
+]
