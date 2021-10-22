@@ -3,6 +3,7 @@ import {Card, Accordion } from 'react-bootstrap';
 import React, { useEffect, useState } from 'react';
 import svg1 from "../images/undraw_medical_care_movn.svg";
 import svg2 from "../images/undraw_medicine_b1ol.svg";
+import {Link} from "react-router-dom" ;
 
 const Home = () => {
     
@@ -74,7 +75,9 @@ const Home = () => {
                             <Card.Text>
                                 {freecard?.description}
                             </Card.Text>
-                            <button href={freecard?.link}>Details</button>
+                            <Link to={`/service/${freecard?.id}`}>
+                                <button href={freecard?.link}>Details</button>
+                            </Link>
                         </Card.Body>
                     </Card>
                     </>)
@@ -98,7 +101,9 @@ const Home = () => {
                             <Card.Text>
                                 {paidcard?.description}
                             </Card.Text>
-                            <button href={paidcard?.link}>Details</button>
+                            <Link to={`/service/${paidcard.id}`}>
+                                <button href={paidcard?.link}>Details</button>
+                            </Link>
                         </Card.Body>
                     </Card>
                     </>)

@@ -20,6 +20,7 @@ import About from "./page/About/About";
 import Error from "./page/404/error";
 import AllServices from "./page/All Services/AllServices";
 import Profile from "./page/UserProfile/profile";
+import Service from "./page/service/service";
 
 
 function App() {
@@ -76,26 +77,29 @@ function App() {
           {/* place */}
 
           <Switch>
-            <Route path="/about">
+            <Route exact path="/about">
               <About />
             </Route>
-            <Route path="/signin">
+            <Route exact path="/signin">
               <Signin />
             </Route>
-            <Route path="/signup">
+            <Route exact path="/signup">
               <Signup />
             </Route>
-            <Route path="/">
-              <Home />
-            </Route>
-            <Route path="">
-              <Error />
-            </Route>
-            <Route path="/AllServices">
+            <Route exact path="/AllServices">
               <AllServices />
             </Route>
-            <Route path="/profile">
+            <Route exact path="/profile">
               <Profile />
+            </Route>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/service/:id">
+              <Service />
+            </Route>
+            <Route exact path="*">
+              <Error />
             </Route>
           </Switch>
         </div>

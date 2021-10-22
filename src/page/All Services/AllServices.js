@@ -1,4 +1,3 @@
-import React from 'react';
 import "./AllServices.css";
 import {Card, Accordion } from 'react-bootstrap';
 import React, { useEffect, useState } from 'react';
