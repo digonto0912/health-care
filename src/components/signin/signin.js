@@ -1,10 +1,31 @@
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Redirect,
+  useHistory,
+  useLocation
+} from "react-router-dom";
 import React from 'react';
 import { useState } from 'react';
+import { Button } from 'react-bootstrap';
 import useAuth from '../../hooks/useAuth';
 import useFirebase from '../../hooks/useFirebase';
 import loginImg from '../../images/login.svg'
 
 const Signin = () => {
+    const location = useLocation();
+    const history = useHistory();
+    const Redirect_uri = location.state?.from || "/";
+    console.log(Redirect_uri);
+
+    const handlegooglelogin = () =>{
+        signInWithGoogle().then(result => {
+                history.push(Redirect_uri)
+            })
+    }
+
     const { signInWithGoogle, handleUserRegister, handleResetPassword} =useAuth()
     const [email,setEmail] = useState("");
     const [password,setPassword] = useState("");
@@ -58,7 +79,7 @@ const resetPassword =()=>{
                         </div>
                     </div>
                     <div className="from-group mt-5">
-                        <button onClick={signInWithGoogle} className="btn btn-primary" >Google Sign in</button>
+                        <Button variant="primary" onClick={handlegooglelogin} className="btn btn-primary" >Google Sign in</Button>
                     </div>
                 </div>
 

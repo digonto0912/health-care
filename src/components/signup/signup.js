@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Button } from 'react-bootstrap';
 import useAuth from '../../hooks/useAuth';
 
 const Signup = () => {
@@ -73,7 +74,6 @@ const Signup = () => {
                         </div>
                         <div className="form-group">
                             <label htmlFor="" className="text-danger">password should be atleast 6 chacracter and two digits </label>
-                            <label htmlFor="" className="text-danger">Forgot your password?</label>
                             <div className="row mb-3 text-danger" >{err} </div>
                             <div className='d-flex justify-content-between'>
                                 <div className="from-group mt-3">
@@ -87,9 +87,6 @@ const Signup = () => {
                                 </div>
                             </div>
                         </div>
-                        {/* <div className="from-group mt-5">
-                            <button onClick='{signInWithGoogle}' className="btn btn-primary" >Google Sign in</button>
-                        </div> */}
                     </div>
 
                 </div>

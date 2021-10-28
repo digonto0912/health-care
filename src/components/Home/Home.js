@@ -1,5 +1,5 @@
 import "./Home.css";
-import {Card, Accordion } from 'react-bootstrap';
+import {Card, Accordion, Button } from 'react-bootstrap';
 import React, { useEffect, useState } from 'react';
 import svg1 from "../../images/undraw_medical_care_movn.svg";
 import svg2 from "../../images/undraw_medicine_b1ol.svg";
@@ -67,7 +67,7 @@ const Home = () => {
                                 {AllCard?.description}
                             </Card.Text>
                             <Link to={`/addService/${AllCard?.id}`}>
-                                <button href={AllCard?.link}>Details</button>
+                                <Button variant="primary">Details</Button>
                             </Link>
                         </Card.Body>
                     </Card>
@@ -131,7 +131,7 @@ const Home = () => {
                 <form className="me-2" >
                     <input className="form-control" type="email" placeholder="Email" />
                 </form>
-                <button className="py-8 px-46">Send</button>
+                <Button variant="primary" className="py-8 px-46">Send</Button>
                 </div>
             </div>
 

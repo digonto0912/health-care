@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
 import "./profile.css";
 import useAuth from '../../hooks/useAuth';
 
@@ -14,7 +15,7 @@ const Profile = () => {
           <img src={user?.photoURL} />
           <h2> <b> {user?.displayName} </b> </h2>
           <p>{user?.email}</p>
-          <button onClick={logOut}>Sign out</button>
+          <Button variant="primary" onClick={logOut}>Sign out</Button>
         </div>
 
         </div>

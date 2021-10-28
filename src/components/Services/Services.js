@@ -1,15 +1,17 @@
 import "../Home/Home.css";
-import { Card } from 'react-bootstrap';
+import { Card, Button } from 'react-bootstrap';
 import React, { useEffect, useState } from 'react';
+import {Link} from "react-router-dom" ;
 
 const Services = () => {
     
-    const [Services, setServices] = useState([]);
+    const [AllCards, setAllCards] = useState([]);
+
 
     useEffect(()=>{
         fetch("./AllServices.json")
         .then(res => res.json())
-        .then(data => setServices(data))
+        .then(data => setAllCards(data))
     },[]);
 
     return (
@@ -24,16 +26,18 @@ const Services = () => {
 
                 <div className="cardsStyles">
                 {
-                    Services.map(Service => <>
+                    AllCards.map(AllCard => <>
                     <Card  className=" cardsStyle colstyle mb-5">
-                        <Card.Img variant="top" src={Service?.img} className="imgSize" />
+                        <Card.Img variant="top" src={AllCard?.img} className="imgSize" />
                         <Card.Body>
-                            <Card.Title>{Service?.title}</Card.Title>
-                            <Card.Title>{Service?.price}</Card.Title>
+                            <Card.Title>{AllCard?.title}</Card.Title>
+                            <Card.Title>{AllCard?.price}</Card.Title>
                             <Card.Text>
-                                {Service?.description}
+                                {AllCard?.description}
                             </Card.Text>
-                            <button href={Service?.link}>Details</button>
+                            <Link to={`/addService/${AllCard?.id}`}>
+                                <Button variant="primary">Details</Button>
+                            </Link>
                         </Card.Body>
                     </Card>
                     </>)

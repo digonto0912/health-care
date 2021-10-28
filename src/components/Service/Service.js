@@ -1,4 +1,5 @@
 import "../Home/Home.css";
+import { Button } from 'react-bootstrap';
 import {useParams} from "react-router";
 import {Link} from "react-router-dom" ;
 import {Card} from 'react-bootstrap';
@@ -41,7 +42,7 @@ const Service = () => {
                     <br />
         
                     <Link to="/">
-                    <button className="d-grid m-auto">Go Back</button>
+                    <Button variant="primary" className="d-grid m-auto">Go Back</Button>
                     </Link>
                     </div>
                 </div>
