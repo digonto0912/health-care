@@ -1,0 +1,9 @@
+.navStyle{
+    color:white;
+    text-decoration: none;
+    border-radius: 3px;
+  }
+.navStyle:hover{
+    color:rgba(46, 46, 46, 0.801);
+    border-radius: 3px;
+  }

@@ -1,26 +1,19 @@
-import "./home.css";
+import "./Home.css";
 import {Card, Accordion } from 'react-bootstrap';
 import React, { useEffect, useState } from 'react';
-import svg1 from "../images/undraw_medical_care_movn.svg";
-import svg2 from "../images/undraw_medicine_b1ol.svg";
+import svg1 from "../../images/undraw_medical_care_movn.svg";
+import svg2 from "../../images/undraw_medicine_b1ol.svg";
 import {Link} from "react-router-dom" ;
 
 const Home = () => {
     
-    const [freecards, setfreecards] = useState([]);
-    const [paidcards, setpaidcards] = useState([]);
+    const [AllCards, setAllCards] = useState([]);
 
 
     useEffect(()=>{
-        fetch("./freeServices.json")
+        fetch("./AllServices.json")
         .then(res => res.json())
-        .then(data => setfreecards(data))
-    },[]);
-
-    useEffect(()=>{
-        fetch("./paidServices.json")
-        .then(res => res.json())
-        .then(data => setpaidcards(data))
+        .then(data => setAllCards(data))
     },[]);
 
 
@@ -62,47 +55,19 @@ const Home = () => {
                 
                 <br />
                 <br />
-                <h1>Free Services</h1>
-                <br />
                 <div className="cardsStyles">
                 {
-                    freecards.map(freecard => <>
+                    AllCards.map(AllCard => <>
                     <Card  className=" cardsStyle colstyle mb-5">
-                        <Card.Img variant="top" src={freecard?.img} className="imgSize" />
+                        <Card.Img variant="top" src={AllCard?.img} className="imgSize" />
                         <Card.Body>
-                            <Card.Title>{freecard?.title}</Card.Title>
-                            <Card.Title>{freecard?.price}</Card.Title>
+                            <Card.Title>{AllCard?.title}</Card.Title>
+                            <Card.Title>{AllCard?.price}</Card.Title>
                             <Card.Text>
-                                {freecard?.description}
+                                {AllCard?.description}
                             </Card.Text>
-                            <Link to={`/service/${freecard?.id}`}>
-                                <button href={freecard?.link}>Details</button>
-                            </Link>
-                        </Card.Body>
-                    </Card>
-                    </>)
-                }
-                </div>
-
-                <br />
-
-                <h1>Paid Services</h1>
-
-                <br />
-
-                <div className="cardsStyles">
-                {
-                    paidcards.map(paidcard => <>
-                    <Card  className=" cardsStyle colstyle mb-5">
-                        <Card.Img variant="top" src={paidcard?.img} className="imgSize" />
-                        <Card.Body>
-                            <Card.Title>{paidcard?.title}</Card.Title>
-                            <Card.Title>{paidcard?.price}</Card.Title>
-                            <Card.Text>
-                                {paidcard?.description}
-                            </Card.Text>
-                            <Link to={`/service/${paidcard.id}`}>
-                                <button href={paidcard?.link}>Details</button>
+                            <Link to={`/addService/${AllCard?.id}`}>
+                                <button href={AllCard?.link}>Details</button>
                             </Link>
                         </Card.Body>
                     </Card>
@@ -175,30 +140,3 @@ const Home = () => {
 };
 
 export default Home;
-
-
-=========================================================
-
-
-//<Link to="/home" className='nav-link text-black'>home</Link>
-  //                      <Link to="/services" className='nav-link text-black'>Services</Link>
-    //                    <Link to="/doctor" className='nav-link text-black'>DoctorPortal</Link>
-      //                  <Link to="/admit" className='nav-link text-black'>Admit</Link>
-        //                <Link to="/career" className='nav-link text-black'>Career</Link>
-          //              <Link to="" className='nav-link text-black'>signed by as:<span style={{color:'blue'}}> {user.displayName}</span></Link>
-                        
-            //            {
-              //              user.email ? <Link to="/login">
-
-  //                              <button onClick={logOut} className="btn btn-warning me-2" >Log-out</button>
-    //                        </Link>
-      //                      :
-        //                        <Link to="/login">
-          //                          <button className="btn btn-warning me-2" >Log In</button>
-            //                    </Link>
-                                
-                                
-                                
-              //          }
-                      
-                 //       <Link to="/singup" className='nav-link text-black'>Sign up</Link>

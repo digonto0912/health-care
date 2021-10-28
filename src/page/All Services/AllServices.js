@@ -1,4 +1,5 @@
 import "./AllServices.css";
+import "../home page/home.css";
 import {Card, Accordion } from 'react-bootstrap';
 import React, { useEffect, useState } from 'react';
 

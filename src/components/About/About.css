@@ -1,0 +1,17 @@
+.topDiv{
+    margin:3rem;
+    padding:3rem;
+}
+.topHeadline{
+    margin:3rem;
+}
+
+@media only screen and (max-width:576px) {
+    .topDiv{
+        margin: 10px;
+    }
+    .topHeadline{
+        margin-left:10px;
+        margin-top:10px;
+    }
+}

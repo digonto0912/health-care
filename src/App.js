@@ -1,117 +1,60 @@
-import React from "react";
 import './App.css';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Firebasehuck from "./page/hucks/firebasehuck";
-import { 
-  Navbar,
-  Nav,
-  Container 
-} from 'react-bootstrap';
-import Signin from "./page/signin/signin";
-import Signup from "./page/signup/signup";
-import Home from "./page/home page/home";
-import About from "./page/About/About";
-import Error from "./page/404/error";
-import AllServices from "./page/All Services/AllServices";
-import Profile from "./page/UserProfile/profile";
-import Service from "./page/service/service";
-
+import { BrowserRouter,Switch,Route } from 'react-router-dom';
+import NavBar from './components/Navbar/Navbar';
+import Home from './components/Home/Home';
+import About from './components/About/About';
+import Services from './components/Services/Services';
+import Profile from './components/Profile/Profile';
+import Signin from './components/signin/signin';
+import NotFound from './components/NotFound/NotFound';
+import Service from './components/Service/Service';
+import AuthProvider from './context/AuthProvider';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
+import Footer from './components/Footer/Footer';
+import Signup from './components/signup/signup';
 
 function App() {
-
-  const {signOutfunction} = Firebasehuck();
-  const {user} = Firebasehuck();
-
-    return (
-
-      <authContext>
-      <Router>
-        <div>
-
-
-          {/* location */}
-
-          <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
-            <Container>
-              <Navbar.Brand><b>Happy Health</b></Navbar.Brand>
-              <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-              <Navbar.Collapse id="responsive-navbar-nav">
-              <Nav className="me-auto">
-
-                <Nav.Link className="navStyles">
-                  <Link className="navStyle" to="/">Home</Link>
-                </Nav.Link>
-                <Nav.Link className="navStyles">
-                  <Link className="navStyle" to="/AllServices">All Services</Link>
-                </Nav.Link>
-                <Nav.Link className="navStyles">
-                  <Link className="navStyle" to="/about">About</Link>
-                </Nav.Link>
-                <Nav.Link className="navStyles">
-                  <Link className="navStyle" to="/profile">profile</Link>
-                </Nav.Link>
-                <Nav.Link className="navStyles">
-                  <Link className="navStyle" to="/signin">signin</Link>
-                </Nav.Link>
-                <Nav.Link className="navStyles">
-                  <Link className="navStyle" to="/signup">signup</Link>
-                </Nav.Link>
-                <Nav.Link className="navStyles">
-                  <Link className="navStyle" onClick={signOutfunction}>signout</Link>
-                </Nav.Link>
-                <Nav.Link>
-                <div>loged :{user.email}</div>
-                </Nav.Link>
-
-              </Nav>
-              </Navbar.Collapse>
-            </Container>
-          </Navbar>
-
-          {/* place */}
-
-          <Switch>
-            <Route exact path="/about">
-              <About />
-            </Route>
-            <Route exact path="/signin">
-              <Signin />
-            </Route>
+  return (
+    <div className="App">
+      <AuthProvider>
+      <BrowserRouter>
+      <NavBar></NavBar>
+      <Switch>
+        <Route exact path ="/">
+          <Home></Home>
+        </Route>
+        <Route path ="/home">
+          <Home></Home>
+        </Route>
+        <Route path ="/AllServices">
+          <Services></Services>
+        </Route>
+        <Route path ="/about">
+          <About></About>
+        </Route>
+        <PrivateRoute path="/profile">
+          <Profile></Profile>
+        </PrivateRoute>
+        <Route path="/signin">
+          <Signin></Signin>
+        </Route>
             <Route exact path="/signup">
-              <Signup />
+              <Signup></Signup>
             </Route>
-            <Route exact path="/AllServices">
-              <AllServices />
-            </Route>
-            <Route exact path="/profile">
-              <Profile />
-            </Route>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/service/:id">
-              <Service />
-            </Route>
-            <Route exact path="*">
-              <Error />
-            </Route>
-          </Switch>
-        </div>
-      </Router>
-
-      <footer className="text-center h-5 mt-5 p-5 copyright-2021">
-        Copyright 2021
-      </footer>
-      </authContext>
-    );
-  }
-
-
+          <PrivateRoute path="/addService/:id">
+            <Service></Service>
+          </PrivateRoute>
+        <Route path ="*">
+          <NotFound></NotFound>
+        </Route>
+      </Switch>
+      
+      </BrowserRouter>
+      </AuthProvider>
+      <Footer></Footer>
+      
+    </div>
+  );
+}
 
 export default App;
